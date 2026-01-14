@@ -61,26 +61,33 @@ const Approach = () => {
             </div>
           </div>
 
-          <div className="space-y-4">
-            {steps.map((step, index) => (
-              <div
-                key={step.title}
-                className="group flex gap-6 p-6 rounded-xl card-gradient border-glow hover:border-primary/40 transition-all duration-300"
-              >
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <step.icon className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-3 mb-1">
-                    <span className="text-xs font-semibold text-primary/60">
-                      STEP {index + 1}
-                    </span>
+          <div className="relative">
+            {/* Connecting line */}
+            <div className="absolute left-[1.5rem] top-[3rem] bottom-[3rem] w-0.5 bg-gradient-to-b from-primary/50 via-primary/30 to-primary/10 hidden md:block" />
+            
+            <div className="space-y-4">
+              {steps.map((step, index) => (
+                <div
+                  key={step.title}
+                  className="group relative flex gap-6 p-6 rounded-xl bg-card border border-border/50 shadow-lg shadow-primary/5 hover:shadow-xl hover:shadow-primary/10 hover:border-primary/40 transition-all duration-300 animate-fade-up"
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  {/* Icon with z-index to appear above line */}
+                  <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/20">
+                    <step.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-1">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground">{step.description}</p>
+                  <div>
+                    <div className="flex items-center gap-3 mb-1">
+                      <span className="text-xs font-semibold text-primary px-2 py-0.5 bg-primary/10 rounded-full">
+                        STEP {index + 1}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-semibold mb-1">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground">{step.description}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
