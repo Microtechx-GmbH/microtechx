@@ -4,10 +4,10 @@ import HeroAnimation from "./HeroAnimation";
 
 const Hero = () => {
   const features = [
-    "100+ Customers Served",
-    "8+ Years Experience",
-    "120+ Projects Delivered",
-    "Microsoft Security Experts",
+    "40-70% Cost Reduction",
+    "8-12 Week Deployment",
+    "Production-Ready Systems",
+    "Custom + Platform Options",
   ];
 
   return (
@@ -51,10 +51,9 @@ const Hero = () => {
               </Link>
               <Link
                 to="/services/consulting"
-                className="btn-outline inline-flex items-center justify-center px-8 py-4 font-semibold text-base group"
+                className="inline-flex items-center justify-center px-8 py-4 bg-card border border-border rounded-lg font-semibold text-base text-foreground shadow-md hover:shadow-lg hover:border-primary/50 transition-all duration-300"
               >
-                <Play className="w-5 h-5 mr-2" />
-                Explore Services
+                Explore Solutions
               </Link>
             </div>
 
@@ -62,11 +61,11 @@ const Hero = () => {
               {features.map((feature, index) => (
                 <div 
                   key={feature} 
-                  className="flex items-center gap-3 animate-fade-up"
+                  className="flex items-center gap-3 px-5 py-4 bg-card border border-border/50 rounded-xl shadow-md hover:shadow-lg hover:border-primary/30 transition-all duration-300 animate-fade-up"
                   style={{ animationDelay: `${0.5 + index * 0.1}s` }}
                 >
-                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-accent" />
-                  <span className="text-sm text-muted-foreground font-medium">{feature}</span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-primary flex-shrink-0" />
+                  <span className="text-sm text-foreground font-medium">{feature}</span>
                 </div>
               ))}
             </div>
