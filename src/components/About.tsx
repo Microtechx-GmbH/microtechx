@@ -38,7 +38,7 @@ const About = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="p-8 rounded-2xl card-gradient border-glow">
+          <div className="p-8 rounded-2xl bg-card border border-border/50 shadow-lg shadow-primary/5 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
             <h3 className="text-2xl font-bold mb-6">Key Differentiators</h3>
             <div className="space-y-4">
               {differentiators.map((item) => (
@@ -50,7 +50,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="p-8 rounded-2xl card-gradient border-glow">
+          <div className="p-8 rounded-2xl bg-card border border-border/50 shadow-lg shadow-primary/5 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
             <h3 className="text-2xl font-bold mb-6">Expertise & Heritage</h3>
             <p className="text-muted-foreground mb-6">
               Our consultants bring deep experience in:
