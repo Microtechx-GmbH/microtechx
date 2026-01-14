@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoWhite from "@/assets/logo-white.png";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const navLinks = [
@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logoWhite} alt="Microtechx" className="h-8 md:h-10" />
+            <img src={logo} alt="Microtechx" className="h-8 md:h-10" />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
