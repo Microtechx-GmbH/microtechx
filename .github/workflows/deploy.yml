@@ -3,7 +3,7 @@ name: Deploy Microtechx Website to GitHub Pages
 on:
   push:
     branches:
-      - main  # deploys on push to main branch
+      - main
 
 permissions:
   contents: read
@@ -13,16 +13,15 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
-      page_url: ${{ steps.deploy-to-pages.outputs.page_url }}
+
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: npm
 
       - name: Install dependencies
@@ -31,8 +30,8 @@ jobs:
       - name: Build Vite app
         run: npm run build
 
-      - name: Upload artifact for Pages
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
           path: dist
 
@@ -41,8 +40,9 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy to GitHub Pages
-        id: deploy
-        uses: actions/deploy-pages@v4
+        id: deployment
+        uses: actions/deploy-pages@v1
