@@ -144,7 +144,7 @@ const HeroAnimation = () => {
       </div>
 
       {/* Floating icons with labels */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 px-8 lg:px-12">
         {floatingItems.map((item, index) => (
           <div
             key={item.label}
