@@ -2,13 +2,13 @@ import { Shield, Cloud, Database, Key, User, Fingerprint, CheckCircle, Lock, Bra
 
 const floatingItems = [
   { icon: Cloud, label: "Cloud", position: { top: '8%', left: '50%' }, transform: 'translateX(-50%)', delay: '0s', color: 'primary' },
-  { icon: Database, label: "Data", position: { top: '18%', right: '3%' }, delay: '0.5s', color: 'accent' },
-  { icon: Server, label: "Server", position: { top: '50%', right: '-2%' }, transform: 'translateY(-50%)', delay: '1s', color: 'primary' },
-  { icon: Key, label: "Access", position: { bottom: '18%', right: '8%' }, delay: '1.5s', color: 'accent' },
+  { icon: Database, label: "Data", position: { top: '18%', right: '8%' }, delay: '0.5s', color: 'accent' },
+  { icon: Server, label: "Server", position: { top: '50%', right: '4%' }, transform: 'translateY(-50%)', delay: '1s', color: 'primary' },
+  { icon: Key, label: "Access", position: { bottom: '18%', right: '10%' }, delay: '1.5s', color: 'accent' },
   { icon: Lock, label: "Security", position: { bottom: '3%', left: '50%' }, transform: 'translateX(-50%)', delay: '2s', color: 'primary' },
-  { icon: Fingerprint, label: "Identity", position: { bottom: '18%', left: '8%' }, delay: '2.5s', color: 'accent' },
-  { icon: User, label: "Users", position: { top: '50%', left: '-2%' }, transform: 'translateY(-50%)', delay: '3s', color: 'primary' },
-  { icon: CheckCircle, label: "Compliant", position: { top: '18%', left: '3%' }, delay: '3.5s', color: 'accent' },
+  { icon: Fingerprint, label: "Identity", position: { bottom: '18%', left: '10%' }, delay: '2.5s', color: 'accent' },
+  { icon: User, label: "Users", position: { top: '50%', left: '4%' }, transform: 'translateY(-50%)', delay: '3s', color: 'primary' },
+  { icon: CheckCircle, label: "Compliant", position: { top: '18%', left: '8%' }, delay: '3.5s', color: 'accent' },
 ];
 
 const HeroAnimation = () => {
