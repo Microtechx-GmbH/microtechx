@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // Replace 'microtechx' with your GitHub repo name
-const repoName = "microtechx";
+const repoName = "/microtechx/";
 
 export default defineConfig(({ mode }) => ({
   base: `/${repoName}/`, // ✅ Important for GitHub Pages
