@@ -76,8 +76,8 @@ const Services = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10">
-                <div className="w-14 h-14 rounded-xl bg-white flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary/20 group-hover:scale-110 transition-all duration-500 shadow-md">
-                  <service.icon className="w-7 h-7 text-primary" />
+                <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-primary/30 group-hover:scale-110 transition-all duration-500 shadow-lg shadow-primary/20">
+                  <service.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
