@@ -1,4 +1,4 @@
-import logoWhite from "@/assets/logo-white.png";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const services = [
@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="lg:col-span-1">
-            <img src={logoWhite} alt="Microtechx" className="h-10 mb-6" />
+            <img src={logo} alt="Microtechx" className="h-10 mb-6" />
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Your Partner from Complexity to Clarity in Security & AI. 
               Empowering businesses to grow securely.
