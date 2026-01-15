@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["ES2023"],
+    "lib": ["ES2023", "DOM"],      // Add DOM for browser APIs
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -16,7 +16,9 @@
     "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "jsx": "react-jsx"             // Needed for React 18+
   },
-  "include": ["vite.config.ts"]
+  "include": ["src", "vite.config.ts"], // ⚠ Include all source files
+  "exclude": ["node_modules", "dist"]
 }
