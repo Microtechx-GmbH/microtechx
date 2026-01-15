@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // Replace "microtechx" with your repo name
 export default defineConfig(({ mode }) => ({
-  base: "microtechx/", // <-- THIS IS CRUCIAL FOR GH PAGES
+  base: "/microtechx/", // <-- THIS IS CRUCIAL FOR GH PAGES
   server: {
     host: "::",
     port: 8080,
