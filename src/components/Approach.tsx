@@ -70,23 +70,23 @@ const Approach = () => {
             {steps.map((step, index) => (
               <div
                 key={step.title}
-                className={`group relative p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 animate-fade-up ${
+                className={`group relative p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/50 hover:bg-card/80 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-500 ease-out animate-fade-up ${
                   index === 4 ? 'sm:col-span-2 sm:max-w-[calc(50%-0.5rem)] sm:mx-auto' : ''
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Number badge */}
-                <span className="absolute top-4 right-4 text-4xl font-bold text-primary/10 group-hover:text-primary/20 transition-colors">
+                <span className="absolute top-4 right-4 text-4xl font-bold text-primary/10 group-hover:text-primary/20 transition-colors duration-500">
                   {step.number}
                 </span>
                 
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300">
-                  <step.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 ease-out shadow-lg shadow-primary/30">
+                  <step.icon className="w-6 h-6 text-white" />
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-300">
                   {step.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
