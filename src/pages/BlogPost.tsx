@@ -1,12 +1,23 @@
 import { useParams, Link } from "react-router-dom";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
-import { blogPosts } from "@/data/blogPosts";
+import { blogPosts } from "../data/blogPosts";
+
+interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  date: string;
+  readTime: string;
+  image: string;
+  content: string;
+}
 
 const BlogPost = () => {
   const { slug } = useParams();
-  const post = blogPosts.find(p => p.slug === slug);
+  const post = blogPosts.find((p: BlogPost) => p.slug === slug);
 
   if (!post) {
     return (
@@ -41,14 +52,14 @@ const BlogPost = () => {
           <img src={post.image} alt={post.title} className="w-full rounded-2xl mb-12" />
           
           <div className="prose prose-lg max-w-none">
-            {post.content.split('\n\n').map((paragraph, i) => {
+            {post.content.split('\n\n').map((paragraph: string, i: number) => {
               if (paragraph.startsWith('## ')) {
                 return <h2 key={i} className="text-2xl font-bold mt-8 mb-4">{paragraph.replace('## ', '')}</h2>;
               }
               if (paragraph.startsWith('- ')) {
                 return (
                   <ul key={i} className="list-disc pl-6 my-4 space-y-2">
-                    {paragraph.split('\n').map((item, j) => (
+                    {paragraph.split('\n').map((item: string, j: number) => (
                       <li key={j} className="text-muted-foreground">{item.replace('- ', '')}</li>
                     ))}
                   </ul>
@@ -57,7 +68,7 @@ const BlogPost = () => {
               if (paragraph.match(/^\d\./)) {
                 return (
                   <ol key={i} className="list-decimal pl-6 my-4 space-y-2">
-                    {paragraph.split('\n').map((item, j) => (
+                    {paragraph.split('\n').map((item: string, j: number) => (
                       <li key={j} className="text-muted-foreground">{item.replace(/^\d\.\s/, '')}</li>
                     ))}
                   </ol>

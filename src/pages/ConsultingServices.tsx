@@ -1,5 +1,5 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { Shield, CheckCircle, Lock, RefreshCw, Monitor, Brain, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -23,7 +23,7 @@ const ConsultingServices = () => (
           <p className="text-lg text-muted-foreground">At Microtechx, we deliver cutting-edge, security-first solutions that empower businesses to thrive in the digital era.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, i) => (
+          {services.map((service) => (
             <div key={service.title} className="bg-card rounded-2xl p-8 border border-border/50 card-hover">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-6">
                 <service.icon className="w-7 h-7 text-white" />

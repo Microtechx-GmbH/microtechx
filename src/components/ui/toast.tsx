@@ -3,7 +3,7 @@ import * as ToastPrimitives from "@radix-ui/react-toast";
 import { cva, type VariantProps } from "class-variance-authority";
 import { X } from "lucide-react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 const ToastProvider = ToastPrimitives.Provider;
 
@@ -90,7 +90,7 @@ const ToastDescription = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Description>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Description>
 >(({ className, ...props }, ref) => (
-  <ToastPrimitives.Description ref={ref} className={cn("text-sm opacity-90", className)} {...props} />
+  <ToastDescription ref={ref} className={cn("text-sm opacity-90", className)} {...props} />
 ));
 ToastDescription.displayName = ToastPrimitives.Description.displayName;
 

@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
-import { blogPosts } from "@/data/blogPosts";
+import { blogPosts } from "../data/blogPosts";
+
+interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  date: string;
+  readTime: string;
+  image: string;
+  content: string;
+}
 
 const BlogCarousel = () => (
   <section className="py-20 lg:py-28">
@@ -16,7 +27,7 @@ const BlogCarousel = () => (
       </div>
       
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogPosts.slice(0, 3).map(post => (
+        {blogPosts.slice(0, 3).map((post: BlogPost) => (
           <Link key={post.slug} to={`/blog/${post.slug}`} className="group bg-card rounded-2xl overflow-hidden border border-border/50 card-hover">
             <div className="aspect-video overflow-hidden">
               <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />

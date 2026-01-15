@@ -1,6 +1,6 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { Users, Shield, Zap, Clock, ArrowRight, CheckCircle } from "lucide-react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { Users, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const roles = ["Microsoft Sentinel Engineer", "Microsoft 365 Security Engineer", "Microsoft Cloud Security Engineer", "DevSecOps Engineer", "AI Security Engineer"];
