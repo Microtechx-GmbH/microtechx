@@ -1,12 +1,12 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import Stats from "@/components/Stats";
-import About from "@/components/About";
-import Approach from "@/components/Approach";
-import BlogCarousel from "@/components/BlogCarousel";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Services from "../components/Services";
+import Stats from "../components/Stats";
+import About from "../components/About";
+import Approach from "../components/Approach";
+import BlogCarousel from "../components/BlogCarousel";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const Index = () => {
   return (

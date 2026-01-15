@@ -1,8 +1,19 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
-import { blogPosts } from "@/data/blogPosts";
+import { blogPosts } from "../data/blogPosts";
+
+interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  date: string;
+  readTime: string;
+  image: string;
+  content: string;
+}
 
 const Blog = () => (
   <div className="min-h-screen bg-background">
@@ -16,7 +27,7 @@ const Blog = () => (
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map(post => (
+          {blogPosts.map((post: BlogPost) => (
             <Link key={post.slug} to={`/blog/${post.slug}`} className="group bg-card rounded-2xl overflow-hidden border border-border/50 card-hover">
               <div className="aspect-video overflow-hidden">
                 <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />

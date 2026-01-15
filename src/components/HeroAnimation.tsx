@@ -13,10 +13,10 @@ const floatingItems = [
 
 const HeroAnimation = () => {
   return (
-    <div className="relative w-full h-[500px] lg:h-[600px]">
+    <div className="relative w-full h-[500px] lg:h-[600px] bg-[#0a1628] rounded-3xl overflow-hidden">
       {/* Background glow effects */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-80 h-80 rounded-full bg-primary/20 blur-[80px] animate-pulse-glow" />
+        <div className="w-80 h-80 rounded-full bg-primary/30 blur-[80px] animate-pulse-glow" />
       </div>
       
       {/* Outer rotating ring */}
@@ -127,7 +127,7 @@ const HeroAnimation = () => {
           {/* Shield container */}
           <div className="relative w-32 h-32 lg:w-40 lg:h-40 flex items-center justify-center">
             <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-2xl rotate-45 opacity-25 group-hover:opacity-40 transition-opacity" />
-            <div className="absolute inset-3 bg-card rounded-xl rotate-45 shadow-2xl border border-border/50" />
+            <div className="absolute inset-3 bg-[#0f1f35] rounded-xl rotate-45 shadow-2xl border border-primary/30" />
             <div className="relative z-10 flex flex-col items-center justify-center">
               <Shield className="w-12 h-12 lg:w-16 lg:h-16 text-primary" strokeWidth={1.5} />
               <Brain className="w-7 h-7 lg:w-9 lg:h-9 text-accent absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-70" strokeWidth={1.5} />
@@ -157,16 +157,16 @@ const HeroAnimation = () => {
           >
             <div className="group relative flex flex-col items-center gap-2">
               {/* Icon container with glow */}
-              <div className={`relative p-3 lg:p-4 bg-card rounded-2xl shadow-lg border border-border/50 hover:border-${item.color}/50 hover:shadow-xl hover:shadow-${item.color}/20 transition-all duration-300 hover:scale-110`}>
+              <div className={`relative p-3 lg:p-4 bg-[#0f1f35] rounded-2xl shadow-lg border border-primary/30 hover:border-${item.color}/50 hover:shadow-xl hover:shadow-${item.color}/20 transition-all duration-300 hover:scale-110`}>
                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br from-${item.color}/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity`} />
-                <item.icon className={`relative z-10 w-5 h-5 lg:w-7 lg:h-7 ${item.color === 'primary' ? 'text-primary' : 'text-accent'}`} strokeWidth={1.5} />
+                <item.icon className={`relative z-10 w-5 h-5 lg:w-7 lg:h-7 ${item.color === 'primary' ? 'text-primary' : 'text-white/80'}`} strokeWidth={1.5} />
               </div>
               
               {/* Label pill */}
               <span className={`px-3 py-1 text-[10px] lg:text-xs font-semibold rounded-full shadow-md whitespace-nowrap ${
                 item.color === 'primary' 
-                  ? 'bg-primary/10 text-primary border border-primary/20' 
-                  : 'bg-accent/10 text-accent border border-accent/20'
+                  ? 'bg-primary/20 text-primary border border-primary/30' 
+                  : 'bg-white/10 text-white/90 border border-white/20'
               }`}>
                 {item.label}
               </span>

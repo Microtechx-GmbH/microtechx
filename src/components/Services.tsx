@@ -1,6 +1,6 @@
 import { Shield, Brain, Users, Settings, Monitor, Lock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 
 const services = [
   {
