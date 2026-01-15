@@ -55,7 +55,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="p-8 md:p-12 rounded-3xl card-gradient border-glow shadow-2xl shadow-primary/20">
+          <div className="p-8 md:p-12 rounded-3xl card-gradient border-glow shadow-[0_0_40px_rgba(59,130,246,0.15)]">
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
